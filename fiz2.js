@@ -1,6 +1,6 @@
 let nomes = ["Vitoria", "Leticia" ,"Beatriz"]
 
-nomes.push("Lukas jnr,", "Kaun jnr");
+nomes.push("Lukas jnr", "Kaun jnr");
 console.log(nomes)
 
 let removido = nomes.pop();
