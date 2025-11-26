@@ -1,15 +1,15 @@
+const prompt = require ('prompt-sync')({sigint: true});
 const mensagens = [
-  "Hoje o dia está lindo!",
-  "Não gostei desse trabalho",
-  "A aula foi muito divertida",
-  "Que tarefa chata"
+  {id: 1, frase: "Hoje o dia está lindo!"},
+  {id: 2, frase: "Não gostei desse trabalho"},
+  {id: 3, frase: "A aula foi muito divertida"},
+  {id: 4, frase: "Que tarefa chata"},
 ];
  
-const palavrasProibidas = ["chato", "chata", "não gostei"];
+const resultado = mensagens.filter(f => f.frase.includes("Chata"));
  
-const mensagensComProibidas = mensagens.filter(mensagens => palavrasProibidas.some(p => mensagens.toLowerCase().includes(p.toLowerCase()))
-);
+const resultado2 = mensagens.filter(f => f.frase.includes("Não gostei"));
  
-console.log("Mensagens com palavras proibidas:");
-console.log(mensagensComProibidas);
  
+console.log(resultado);
+console.log(resultado2);
